@@ -12,12 +12,45 @@ body {
 }
 
 .container {
-  width: 825px;
+  width: 848px;
   margin: 0 auto;
 }
 
 .product {
   border: 4px solid #000;
+  position: relative;
+}
+
+.product-header {
+  position: relative;
+}
+
+.sale-tag {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: red;
+  padding: 2px 5px;
+  border: 2px solid #000;
+  letter-spacing: 3px;
+  top: -15px;
+  left: -25px;
+  margin: 0;
+}
+
+.sale-tag2 {
+  background-color: red;
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  top: -15px;
+  right: -25px;
+  padding: 2px 5px;
+  border: 2px solid #000;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 0;
 }
 
 h2 {
@@ -26,22 +59,16 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   padding: 10px 0;
-  margin: 20px 0;
-}
-
-.image {
-  margin-bottom: 10px;
 }
 
 h3 {
   font-size: 14px;
   text-transform: uppercase;
   margin-bottom: 15px;
-  margin-top: 30px;
 }
 
 p {
-  margin: 5px
+  margin: 5px 0;
 }
 
 .more-info:link, .more-info:visited {
@@ -54,7 +81,7 @@ p {
 
 ul {
   list-style-type: square;
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 li {
@@ -65,15 +92,9 @@ li:last-child {
   padding-bottom: 0;
 }
 
-.shipping {
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #777;
-}
-
-.price {
-  font-size: 16px;
+.description {
+  clear: both;
+  text-align: justify;
 }
 
 button {
@@ -85,6 +106,7 @@ button {
   cursor: pointer;
   padding: 15px;
   width: 100%;
+  /*clear: both;*/
 }
 
 button:hover {
@@ -96,3 +118,149 @@ button:hover {
 button:active {
   color: blue;
 }
+
+.colors-section {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.color1 {
+  background-color: black;
+  width: 30px;
+  height: 30px;
+}
+
+.color2 {
+  background-color: blue;
+  width: 30px;
+  height: 30px;
+}
+
+.color3 {
+  background-color: red;
+  width: 30px;
+  height: 30px;
+}
+
+.color4 {
+  background-color: yellow;
+  width: 30px;
+  height: 30px;
+}
+
+.color5 {
+  background-color: green;
+  width: 30px;
+  height: 30px;
+}
+
+.color6 {
+  background-color: brown;
+  width: 30px;
+  height: 30px;
+}
+
+/*.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}*/
+
+/*-----FLOAT-----*/
+
+/*.shipping {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #777;
+  float: right;
+  margin-top: 10px;
+}*/
+
+/*.price {
+  font-size: 16px;
+  float: left;
+  margin-top: 10px;
+}*/
+
+/*.image {
+  margin-bottom: 10px;
+  float: left;
+}*/
+
+/*.info1 {
+  float: left;
+  width: 250px;
+  margin-left: 30px;
+  margin-top: 20px;
+}*/
+
+/*.info2 {
+  float: right;
+  width: 250px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
+}*/
+
+/*-----FLEXBOX-----*/
+
+/*.content {
+  display: flex;
+  gap: 40px;
+}*/
+
+/*.info1 {
+  margin-top: 30px;
+  flex: 1;
+}*/
+
+/*.info2 {
+  margin-top: 30px;
+  margin-right: 40px;
+  flex: 1;
+}*/
+
+.price-shipping {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 20px;
+  margin: 0;
+}
+
+.shipping {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #777;
+  margin: 0;
+}
+
+/*GRID*/
+.product {
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: 250px 1fr 1fr;
+}
+
+.info1 {
+  margin-top: 30px;
+}
+
+.info2 {
+  margin-top: 30px;
+}
+
+.product-header {
+  grid-column: 1 / -1;
+}
+
+button {
+  grid-column: 1 / -1;
+}
+
