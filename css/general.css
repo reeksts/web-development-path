@@ -28,9 +28,13 @@ Paragraph default 1.6
 - Tints:
     #fdf2e9
     #fae5d3
-- Shades: #cf711f
+- Shades:
+    #cf711f
+    #45260a
 - Accents:
 - Greys:
+    #888
+    #767676 (lightest grey allowed on white)
     #555
     #333
     #6f6f6f (lightest allowed on #fdf2e9)
@@ -87,7 +91,6 @@ body {
   margin-bottom: 9.6rem;
 }
 
-
 .grid--2--cols {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -98,6 +101,10 @@ body {
 
 .grid--4--cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5--cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
@@ -140,6 +147,7 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -149,6 +157,8 @@ body {
   border-radius: 9px;
   text-decoration: none;
   transition: all 0.3s;
+  border: none;
+  cursor: pointer;
 }
 
 .btn--full:link,
@@ -172,6 +182,18 @@ body {
 .btn--outline:active {
   background-color: #fdf2e9;
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link,
@@ -208,6 +230,13 @@ body {
   width: 3rem;
   height: 3rem;
   color: #e67e22;
+}
+
+*:focus {
+  outline: none;
+  /*outline: 4px dotted #e67e22;*/
+  /*outline-offset: 8px;*/
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 35, 0.5);
 }
 
 /* HELPER/SETTING CLASSES*/
