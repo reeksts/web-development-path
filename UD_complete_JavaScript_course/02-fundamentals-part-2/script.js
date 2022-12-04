@@ -286,3 +286,18 @@ while (dice !== 6) {
     if (dice === 6) console.log('Loop is about to end...')
 }
 
+
+
+// Coding challenge #1
+
+const myarr = [9, 20, 12, 14, 10];
+
+const printForecats = function (arr) {
+    let str = '...';
+    for (let i = 0; i < arr.length; i++) {
+        str += ` ${arr[i]}°C in ${i + 1} days ...`;
+    }
+    console.log(str)
+}
+
+printForecats(myarr)
