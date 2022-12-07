@@ -42,7 +42,7 @@ const aeg1 = calcAge1(1991);
 console.log(aeg1)
 
 // Function expression
-// funciton cannot be called before declaration
+// funciton cannot be called before declaration (not hoisted)
 const calcAge2 = function (birthYear) {
     return 2037 - birthYear;
 }
@@ -50,6 +50,8 @@ const calcAge2 = function (birthYear) {
 const age2 = calcAge2(1992)
 console.log(age2)
 
+// Arrow functions
+// Function cannot be called before declaration (not hoisted)
 const calcAge = birthYear => 2037 - birthYear;
 console.log(calcAge(1993));
 
